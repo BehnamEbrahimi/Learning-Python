@@ -63,6 +63,6 @@ print(converted_str)
 # converting a string to a list with split method
 print(converted_str.split(', '))
 
-# Empty Tuples
-empty_tuple = ()
-empty_tuple = tuple()
+# Empty Lists
+empty_list = []
+empty_list = list()
