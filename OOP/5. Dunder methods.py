@@ -15,7 +15,7 @@ class Employee:
     def apply_raise(self):
         self.pay = int(self.pay * self.raise_amt)
 
-    def __repr__(self):  # it is called when repr(self) is run. it is used to return an unambigues version of our object ---> for developers and debugging. this is the minimum meaning if we dont have str(), it returns to this method. it should be sth that we recreate the object by it
+    def __repr__(self):  # it is called when repr(self) is run. it is used to return an unambiguous version of our object ---> for developers and debugging. this is the minimum meaning if we dont have str(), it returns to this method. it should be sth that we recreate the object by it
         return "Employee('{}', '{}', {})".format(self.first, self.last, self.pay)
 
     def __str__(self):  # it is called when str(self) is run. it is used to display our object to the end user ---> for ordinary people.
