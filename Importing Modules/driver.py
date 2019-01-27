@@ -16,6 +16,6 @@ print(test)
 
 #
 import sys
-print(sys.path)  # it shows the paths that Python look for a mudule when imported. the current directory is always there. if the module is not there, we can append the directory which our module is to the sys.path lis:
-sys.path.append('C:\\Users\\LENOVO\\Desktop\\Python\\new folder')  # the bettere way is to add this path to the environment variables
+print(sys.path)  # it shows the paths that Python look for a mudule when imported. the current directory is always there. if the module is not there, we can append the directory which our module is to the sys.path list:
+sys.path.append('C:\\Users\\LENOVO\\Desktop\\Python\\new folder')  # the better way is to add this path to the environment variables
 print(sys.path)
