@@ -25,7 +25,7 @@ for dirpath, dirnames, filename in os.walk('c:\\Users\\LENOVO\\Desktop\\Python')
     print('directories:', dirnames)
     print('files:', filename)
 
-print(os.environ.get('Temp'))  # the value of environment variable
+print(os.environ.get('Temp'))  # IMPORTANT: the value of environment variable. this is very useful for hiding secret passwords and informations
 
 print(os.path.join(os.environ.get('Temp'), 'test.txt'))  # os.path.join() method takes two paths and return the concatination of them and you dont have to worry about the \
 print(os.path.basename('c:\\Users\\LENOVO\\Desktop\\Python.py'))  # returns the basename. the path does not have to exist
