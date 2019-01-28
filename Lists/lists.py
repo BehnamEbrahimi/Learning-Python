@@ -34,6 +34,18 @@ courses.sort(reverse=True)  # sorting descending
 print(courses)
 print(sorted(courses))  # does not change the original
 print(courses)
+li = [9, 1, 8, 2, 7, 3, 6, 5, 4]
+s_li = sorted(li)  # it returns a sorted list and the original is untouched
+print(s_li, li)
+li.sort()  # the original will be afected. it returns None
+print(li)
+s_li = sorted(li, reverse=True)  # descending order
+print(s_li)
+li.sort(reverse=True)  # descending order
+print(li)
+li = [-6, -5, -4, 1, 2, 3]
+s_li = sorted(li, key=abs)  # sorting based on absolute value. key takes a function
+print(s_li)
 
 # built-in functions
 print(list_1)
