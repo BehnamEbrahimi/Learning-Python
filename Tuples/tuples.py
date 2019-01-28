@@ -28,3 +28,8 @@ print(tuple_2)
 # Empty Tuples
 empty_tuple = ()
 empty_tuple = tuple()
+
+# sorting tuples, the sort() method is not working for tuples but sort function works
+tup = (9, 1, 8, 2, 7, 3, 6, 5, 4)
+s_tup = sorted(tup)  # it returns a list!
+print(s_tup)
