@@ -38,3 +38,8 @@ for key, value in student.items():
 
 # empty dictionary
 empty_dic = {}
+
+# sorting a dictionary
+student = {'name': 'Ben', 'age': 30, 'courses': ['Math', 'Art'], '100': 500}
+s_student = sorted(student)  # it returns a list of keys sorted alphabetically
+print(s_student)
