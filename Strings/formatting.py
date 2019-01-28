@@ -20,13 +20,11 @@ l = ['Jenn', 23]
 sentence = 'My name is {0[0]} and I am {0[1]} years old.'.format(l)  # we can pass the indexes of the list to the placeholders and just pass the list name to the format
 print(sentence)
 
-
 class Person():
 
     def __init__(self, name, age):
         self.name = name
         self.age = age
-
 
 p1 = Person('Jack', '33')
 
