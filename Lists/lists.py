@@ -49,7 +49,7 @@ print(s_li)
 
 # built-in functions
 print(list_1)
-print(min(list_1))
+print(min(list_1)) # min function takes any iterable such as list
 print(max(list_1))
 print(sum(list_1))
 
