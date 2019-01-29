@@ -87,3 +87,28 @@ my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 print(my_list[-8:6])  # we can combine positive and negative index
 print(my_list[0:-1: 2]) # every other value
 print(my_list[::-1])  # it is like reverse. by leaving out the start and end it starts from the beginning to the end
+
+# list comprehension
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# I want 'n' for each 'n' in nums
+my_list = [n for n in nums]  # instead of writing for loop and appending each value
+print([n for n in nums])
+
+# I want 'n*n' for each 'n' in nums
+my_list = [n * n for n in nums]  # instead of writing for loop and appending each value
+print(my_list)
+# Using a map + lambda
+my_list = list(map(lambda n: n * n, nums))  # map runs everything in the list through a certain function and returns an iterable so we need to cast it to a list. lambda is an anonymous function. of course the list comperehension is more readable
+print(my_list)
+
+# I want 'n' for each 'n' in nums if 'n' is even
+my_list = [n for n in nums if n % 2 == 0]  # instead of writing for loop and appending each value
+print(my_list)
+# Using a filter + lambda
+my_list = list(filter(lambda x: x % 2 == 0, nums))  # filter runs everything in the list through a certain function and returns the original value as an iterable if the function evaluates as True. of course list comperehension is more readable
+print(my_list)
+
+# I want a (letter, num) pair for each letter in 'abcd' and each number in '0123'
+my_list = [(letter, num) for letter in 'abcd' for num in range(4)] # instead of writing nested for loop and appending each value
+print(my_list)
