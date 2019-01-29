@@ -13,6 +13,7 @@ my_gen = gen_func(nums)
 
 for i in my_gen:
     print(i)
+    
 # way 2: genereator expression
 my_gen = (n*n for n in nums) # for generator expression we use parentheses. this way is easier to maintain and more readable
 for i in my_gen:
