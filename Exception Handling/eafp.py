@@ -1,6 +1,6 @@
 # LBYL (Non-Pythonic)
 person = {'name': 'Ben', 'age': '33', 'job': 'developer'}
-if 'name' in person and 'age' in person and 'job' in person:
+if 'name' in person and 'age' in person and 'job' in person: # this check is ugly
     print(f'I am {person["name"]}. I am {person["age"]} and I am a {person["job"]}')
 else:
     print('Missing some keys')
