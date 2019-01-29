@@ -23,3 +23,23 @@ try:
     print(my_list[7])
 except IndexError:
     print('That index does not exist')
+
+# Race Condition
+import os
+my_file = "/tmp/test.txt"
+
+# Race Condition. after chechking, the connection may be disrupted and file might be not accessiblle
+if os.access(my_file, os.R_OK):
+    with open(my_file) as f:
+        print(f.read())
+else:
+    print('File can not be accessed')
+
+# No Race Condition. 
+try:
+    f = open(my_file)
+except IOError as e:
+    print('File can not be accessed')
+else:
+    with f:
+        print(f.read())
