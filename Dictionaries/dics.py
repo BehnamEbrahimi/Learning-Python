@@ -43,3 +43,17 @@ empty_dic = {}
 student = {'name': 'Ben', 'age': 30, 'courses': ['Math', 'Art'], '100': 500}
 s_student = sorted(student)  # it returns a list of keys sorted alphabetically
 print(s_student)
+
+# Dictionary Comprehensions
+names = ['Bruce', 'Clark', 'Peter', 'Logan', 'Wade']
+heros = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool']
+
+# I want a dict{'name': 'hero'} for each name,hero in zip(names, heros). this is the conventional method:
+my_dict = {}
+for name, hero in zip(names, heros):
+    if name !='Peter':
+        my_dict[name] = hero
+print(my_dict)
+# using dictionary comprehension
+my_dict = {name: hero for name, hero in zip(names, heros) if name!='Peter'}
+print(my_dict)
