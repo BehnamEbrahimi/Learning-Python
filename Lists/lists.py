@@ -75,6 +75,11 @@ print(converted_str)
 # converting a string to a list with split method
 print(converted_str.split(', '))
 
+# zipping two lists
+names = ['Bruce', 'Clark', 'Peter', 'Logan', 'Wade']
+heros = ['Batman', 'Superman', 'Spiderman', 'Wolverine', 'Deadpool']
+print(list(zip(names, heros))) # zip function returns an iterable which is a tuple. it can be casted to list
+
 # Empty Lists
 empty_list = []
 empty_list = list()
