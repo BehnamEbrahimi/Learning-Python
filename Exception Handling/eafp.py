@@ -10,3 +10,16 @@ try:
     print(f'I am {person["name"]}. I am {person["age"]} and I am a {person["job"]}. {person["fake"]}')
 except KeyError as e:
     print(f'Missing {e} key')
+
+# Non-Pythonic
+my_list = [1, 2, 3, 4, 5, 6]
+if len(my_list) >= 6:
+    print(my_list[5])
+else:
+    print('That index does not exist')
+
+# Pythonic
+try:
+    print(my_list[7])
+except IndexError:
+    print('That index does not exist')
