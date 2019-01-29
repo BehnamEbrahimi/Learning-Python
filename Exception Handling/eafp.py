@@ -5,7 +5,7 @@ if 'name' in person and 'age' in person and 'job' in person: # this check is ugl
 else:
     print('Missing some keys')
 
-# EAFP (Pythonic)
+# EAFP (Pythonic): it is faster (we access the object only once) and more readable.
 try:
     print(f'I am {person["name"]}. I am {person["age"]} and I am a {person["job"]}. {person["fake"]}')
 except KeyError as e:
