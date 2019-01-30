@@ -2,14 +2,12 @@ import logging
 
 logger = logging.getLogger(__name__)  # get a new logger. the parameter by convention is the variable __name__ (directly: __main__, indirectly: name of the module)
 
-file_handler = logging.FileHandler('employee.log')  # if you want the logger to write into a file, you must use a FileHandler
-
 formatter = logging.Formatter('%(levelname)s:%(name)s:%(message)s')
 
+file_handler = logging.FileHandler('employee.log')  # if you want the logger to write into a file, you must use a FileHandler
 file_handler.setFormatter(formatter)  # specify format to the file_handler
 
 logger.addHandler(file_handler)
-
 logger.setLevel(logging.INFO)
 
 # logging.basicConfig(filename='employee.log', level=logging.INFO, format='%(levelname)s:%(name)s:%(message)s') # not needed anymore
