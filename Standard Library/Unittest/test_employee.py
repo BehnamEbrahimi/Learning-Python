@@ -18,7 +18,7 @@ class TestEmployee(unittest.TestCase):
         self.emp_1 = Employee('Corey', 'Schafer', 50000)
         self.emp_2 = Employee('Sue', 'Smith', 60000)
 
-    def tearDown(self):  # this tearDown method will be run after each single test: for example deteing files...
+    def tearDown(self):  # this tearDown method will be run after each single test: for example deleting files...
         print('tearDown\n')
 
     def test_email(self):  # the tests are not run in order: so keep the tests isolated from each other meaning they should not rely or affect each other
@@ -52,7 +52,7 @@ class TestEmployee(unittest.TestCase):
         self.assertEqual(self.emp_2.pay, 63000)
 
     def test_monthly_schedule(self):
-        with patch('employee.requests.get') as mocked_get:  # inside the patch we pass the object that we want to mock: we wanted to mock requests.get from employee module (the file tha t we wanted to test)
+        with patch('employee.requests.get') as mocked_get:  # inside the patch we pass the object that we want to mock: we wanted to mock requests.get from employee module (the file that we wanted to test)
             mocked_get.return_value.ok = True
             mocked_get.return_value.text = 'Success'
 
