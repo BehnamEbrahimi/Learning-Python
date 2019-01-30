@@ -1,4 +1,4 @@
-import requests
+import requests # it must be installed first pip install requests
 
 
 class Employee:
